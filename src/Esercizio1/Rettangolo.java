@@ -3,8 +3,8 @@ package Esercizio1;
 public class Rettangolo {
 
     //proprietà rettangolo
-    private double altezza;
-    private double larghezza;
+    private final double altezza;
+    private final double larghezza;
 
 
     // costruttori
@@ -15,12 +15,10 @@ public class Rettangolo {
 
     //metodi della classe
     private static double calcolaPerimetro(double altezza, double larghezza){
-       double perimetro = (altezza * 2) + (larghezza *2);
-       return perimetro;
+        return (altezza * 2) + (larghezza *2);
     };
     private static double calcolaArea(double altezza, double larghezza){
-        double area = larghezza * altezza;
-        return area;
+        return larghezza * altezza;
     };
 
     private static void stampaRettangolo (Rettangolo rettangoloDato){
@@ -37,7 +35,7 @@ public class Rettangolo {
         System.out.println("Il perimetro del secondo è " + calcolaPerimetro(rettangoloDato2.altezza, rettangoloDato2.larghezza));
         System.out.println("L'area del terzo è " + calcolaArea(rettangoloDato2.altezza, rettangoloDato2.larghezza));
         System.out.println("la somma dei perimetri è " + sommaPerimetro);
-        System.out.println("la somma dell'area è " + sommaArea);
+        System.out.println("la somma delle aree è " + sommaArea);
     }
 
 
@@ -48,10 +46,11 @@ public class Rettangolo {
 
         Rettangolo rettangolo1 = new Rettangolo(10,5);
         Rettangolo rettangolo2 = new Rettangolo(20,30);
+        Rettangolo rettangolo3 = new Rettangolo(12.8,8.30);
 
 
         stampaRettangolo(rettangolo1);
-        stampaDueRettangoli(rettangolo1,rettangolo2 );
+        stampaDueRettangoli(rettangolo3,rettangolo2 );
 
 
     }
